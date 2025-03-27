@@ -13,11 +13,38 @@ public class PlayerCharacter {
     }
 
     public int getX (){
-        return this.x;
+        return x;
     }
 
     public int getY (){
-        return this.y;
+        return y;
+    }
+
+//    move S (runter)
+//    move D (rechts)
+//    move A (links)
+
+    public int[] move(String direction){
+        switch (direction){
+            case "W":
+                y++;
+                break;
+            case "S":
+                y--;
+                break;
+            case "D":
+                x++;
+                break;
+            case "A":
+                x--;
+                break;
+            default:
+                break;
+        }
+
+        return new int []{x,y};
+
+
     }
 
 
